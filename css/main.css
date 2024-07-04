@@ -149,21 +149,21 @@ button:focus {
 }
 
 .main_slider .main_slider_item:nth-child(1) {
-  background-image: url(/img/img/main1.png);
+  background-image: url(../img/img/main1.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .main_slider .main_slider_item.green {
-  background-image: url(/img/img/main2.png);
+  background-image: url(../img/img/main2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .main_slider .main_slider_item.service {
-  background-image: url(/img/img/main3.png);
+  background-image: url(../img/img/main3.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
