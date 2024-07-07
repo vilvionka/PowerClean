@@ -16,8 +16,12 @@ $('.spectre_slider').slick({
   speed: 300,
   slidesToShow: 4,
   centerMode: false,
-  variableWidth: true
+  variableWidth: true,
+  prevArrow: $('.spectre_slider_arrow_left'),
+  nextArrow: $('.spectre_slider_arrow_right'),
 });
+
+
 $('.blog_slider').slick({
   dots: false,
   arows: true,
@@ -60,7 +64,7 @@ $('.about_slider').slick({
   slidesToShow: 6,
   adaptiveHeight: false,
   autoplay: false,
-  appendDots: $('.about_slider_dots'), 
+  appendDots: $('.about_slider_dots'),
   responsive: [
     {
       breakpoint: 1280,
@@ -147,4 +151,75 @@ $(function () {
   }
 
   var accordion = new Accordion($('.question_accardion'), false);
+});
+
+$('.js_footer_middle_scroll').click(function () {
+  $('html, body').animate({ scrollTop: 0 + 'px' }, 1000)
+});
+
+$(window).scroll(function () {
+  let height = $(window).scrollTop();
+  if (height > 700) {
+    $('.js_call_fixed').addClass('active');
+  } else {
+    $('.js_call_fixed').removeClass('active');
+  }
+});
+
+$(function () {
+  var Accordion = function (el, multiple) {
+    this.el = el || {};
+    this.multiple = multiple || false;
+
+    var accordionHeader = this.el.find('.js_gamburg_box_accordion_header_one');
+    accordionHeader.on('click', {
+      el: this.el,
+      multiple: this.multiple
+    },
+      this.dropdown);
+  };
+
+  Accordion.prototype.dropdown = function (e) {
+    var $el = e.data.el,
+      $this = $(this),
+      $next = $this.next();
+
+    $next.slideToggle();
+    $this.parent().toggleClass('open');
+
+    if (!e.data.multiple) {
+      $el.find('.js_gamburg_box_accordion_body_one').not($next).slideUp().parent().removeClass('open');
+    }
+  }
+
+  var accordion = new Accordion($('.js_gamburg_box_accordion_one'), false);
+});
+
+$(function () {
+  var Accordion = function (el, multiple) {
+    this.el = el || {};
+    this.multiple = multiple || false;
+
+    var accordionHeader = this.el.find('.js_gamburg_box_accordion_header_too');
+    accordionHeader.on('click', {
+      el: this.el,
+      multiple: this.multiple
+    },
+      this.dropdown);
+  };
+
+  Accordion.prototype.dropdown = function (e) {
+    var $el = e.data.el,
+      $this = $(this),
+      $next = $this.next();
+
+    $next.slideToggle();
+    $this.parent().toggleClass('open');
+
+    if (!e.data.multiple) {
+      $el.find('.js_gamburg_box_accordion_body_too').not($next).slideUp().parent().removeClass('open');
+    }
+  }
+
+  var accordion = new Accordion($('.js_gamburg_box_accordion_too'), false);
 });
