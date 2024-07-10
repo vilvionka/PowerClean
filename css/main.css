@@ -2007,6 +2007,7 @@ section h2 {
 section.service_main {
   margin-top: 0px;
   padding-top: 180px;
+  padding-bottom: 180px;
   background-image: url(../img/img/service_page/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -2030,7 +2031,17 @@ section.service_main {
   line-height: 31px;
 }
 .service_main .main_slider_item_content_form {
-  margin-bottom: 177px;
+  margin-bottom: 0px;
+}
+.trigger_service_page{
+  margin-top: 40px;
+}
+.trigger_service_page .main_slider_item_content_trigger {
+  background: #FBF6F1;
+}
+.trigger_service_page .main_slider_item_content_trigger p{
+  max-width: 270px;
+  width: 100%;
 }
 
 
