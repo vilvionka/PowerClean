@@ -1621,6 +1621,8 @@ section h2 {
   border-bottom: 1px solid rgba(224, 224, 224, 1);
   padding: 34px;
   transition: .5s;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .question_accardion_item.open {
@@ -1869,7 +1871,8 @@ section h2 {
 
 .footer_top {
   border-bottom: 1px solid rgba(251, 246, 241, 1);
-  margin-top: 160px;
+  margin-top: 100px;
+  padding-top: 60px;
   padding-bottom: 34px;
 }
 
@@ -2334,6 +2337,246 @@ section.service_main {
   width: calc(50% - 5px);
   margin-top: 0px !important;
 }
+
+.other_services_box {
+  margin-top: 50px;
+}
+
+.other_services_box_item {
+  width: calc(100%/3 - 20px);
+  padding-top: 40px;
+  background: #FBF6F1;
+}
+
+.other_services_box_item_tittle {
+  padding: 0 50px;
+  font-size: 40px;
+  color: var(--var-tittle);
+}
+
+.other_services_box_item p {
+  padding: 0 50px;
+  font-size: 24px;
+  color: #4B4B4B;
+  margin: 5px 0 40px 0;
+}
+
+.other_services_box_item span {
+  padding: 0 50px;
+  font-size: 18px;
+  color: #4B4B4B;
+}
+
+.other_services_box_item span b {
+  font-size: 24px;
+  color: var(--var-brand);
+  font-weight: 300;
+}
+
+.other_services_box_item_img {
+  overflow: hidden;
+  margin-top: 50px;
+  height: 258px;
+}
+
+.other_services_box_item_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.other_services_banner {
+  background-image: url(../img/img/banner/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.other_services_banner_center {
+  max-width: 481px;
+  width: 100%;
+}
+
+.other_services_banner_center p {
+  font-size: 32px;
+  color: var(--var-tittle);
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.other_services_banner_center span {
+  font-size: 18px;
+  color: var(--var-tittle-gray);
+  display: block;
+  text-align: center;
+}
+
+.other_services_banner_center span b {
+  color: var(--var-brand);
+  font-weight: 300;
+}
+
+.other_services_banner_btn {
+  width: 219px;
+  height: 65px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 65px;
+  text-align: center;
+  background-color: var(--var-brand);
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.other_services .question_accardion {
+  margin-top: 160px;
+}
+
+.other_services .question_accardion_item {
+  background: #FBF6F1;
+  margin-bottom: 20px;
+  border: none !important;
+  position: relative;
+}
+
+.question_accardion_item.open {
+  border: none !important;
+}
+
+.question_accardion_item p {
+  max-width: calc(100% - 400px);
+}
+
+.other_services_acc_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 340px;
+  transition: .5s;
+  object-fit: cover;
+}
+
+.other_services_grid {
+  margin-top: 160px;
+}
+
+.other_services_grid_item {
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  padding: 30px;
+  width: calc(33.333% - 20px);
+  margin-bottom: 20px;
+}
+
+.other_services_grid_item span {
+  color: #4B4B4B;
+  font-size: 18px;
+}
+
+.other_services_grid_item p {
+  color: #4B4B4B;
+  font-size: 18px;
+  margin: 5px 0 30px 0;
+}
+
+.other_services_grid_item span b {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--var-brand);
+  padding-left: 10px;
+}
+
+.other_services_grid_item_tittle {
+  font-size: 24px;
+  color: var(--var-tittle);
+}
+
+.other_services_grid_item_btn {
+  width: calc(50% - 5px);
+  height: 65px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--var-brand);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.quantity {
+  height: 305px;
+  width: 100%;
+  background-image: url(../img/img/quinty/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 160px;
+}
+
+.quantity_box {
+  width: 410px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.quantity_box span {
+  font-size: 90px;
+  font-weight: 500;
+  color: var(--var-tittle);
+  line-height: 90px;
+  overflow: hidden;
+  position: relative;
+}
+
+.quantity_box span b {
+  color: var(--var-brand);
+}
+
+.quantity_box p {
+  color: var(--var-tittle-gray);
+  font-size: 24px;
+}
+
+.quantity_box p b {
+  color: var(--var-brand);
+  font-size: 24px;
+}
+
+.trigger h2 {
+  max-width: 1152px;
+  width: 100%;
+}
+
+.trigger_box {
+  margin-top: 50px;
+}
+
+.trigger_box_item {
+  display: block;
+  padding: 12px 24px;
+  border: 1px solid #FBF6F1;
+  border-radius: 200px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #828282;
+  font-size: 18px;
+}
+footer.grey{
+  background: #FBF6F1;
+}
+footer.grey .footer_bottom_trigger {
+  background: #fff;
+}
+footer.grey .footer_bottom_box {
+  border: 1px solid #E0E0E0;
+}
+.price_list_table_box_table{
+  width: 100%;
+}
+.price_list_table_box_table
+
 
 
 @media (max-width: 1480px) {
