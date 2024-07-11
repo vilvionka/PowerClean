@@ -2009,7 +2009,7 @@ section h2 {
 
 section.service_main {
   margin-top: 0px;
-  padding-top: 180px;
+  padding-top: 15px;
   padding-bottom: 180px;
   background-image: url(../img/img/service_page/bg.png);
   background-repeat: no-repeat;
@@ -2021,6 +2021,7 @@ section.service_main {
   font-size: 60px;
   color: var(--var-tittle);
   font-weight: 300;
+  margin-top: 140px;
 }
 
 .service_main h1 b {
@@ -2563,20 +2564,48 @@ section.service_main {
   color: #828282;
   font-size: 18px;
 }
-footer.grey{
+
+footer.grey {
   background: #FBF6F1;
 }
+
 footer.grey .footer_bottom_trigger {
   background: #fff;
 }
+
 footer.grey .footer_bottom_box {
   border: 1px solid #E0E0E0;
 }
-.price_list_table_box_table{
-  width: 100%;
-}
-.price_list_table_box_table
 
+.bread a {
+  display: inline-block;
+  color: #BDBDBD;
+  font-size: 16px;
+}
+
+.bread i {
+  display: inline-block;
+  color: #BDBDBD;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+.bread span {
+  display: inline-block;
+  color: var(--var-brand);
+  font-size: 16px;
+}
+
+.service_page.review_all {
+  color: #fff;
+  border: 1px solid var(--var-brand);
+  background-color: var(--var-brand);
+}
+.question_btn.service_page {
+  color: #fff;
+  border: 1px solid var(--var-brand);
+  background-color: var(--var-brand);
+}
 
 
 @media (max-width: 1480px) {
