@@ -149,7 +149,7 @@
       numElem = elem.length - 1;
       let boxW = box.offsetWidth;
       let itemW = item.offsetWidth;
-      if ( window.innerWidth < 550) {
+      if (window.innerWidth < 550) {
         startMove();
       }
     }
@@ -158,7 +158,7 @@
 
     function goLeft() {
       if (num < numElem) {
-        item.style.left = leftNum - arr[num]  + 'px';
+        item.style.left = leftNum - arr[num] + 'px';
         leftNum = leftNum - arr[num];
         num = num + 1;
       }
@@ -166,7 +166,7 @@
 
     function goRight() {
       if (num > 0) {
-        item.style.left = leftNum + arr[num - 1]  + 'px';
+        item.style.left = leftNum + arr[num - 1] + 'px';
         leftNum = leftNum + arr[num - 1];
         num = num - 1;
       }
@@ -234,7 +234,7 @@
       numElem = elem.length - 1;
       let boxW = box.offsetWidth;
       let itemW = item.offsetWidth;
-      if ( window.innerWidth < 550) {
+      if (window.innerWidth < 550) {
         startMove();
       }
     }
@@ -243,7 +243,7 @@
 
     function goLeft() {
       if (num < numElem) {
-        item.style.left = leftNum - arr[num]  + 'px';
+        item.style.left = leftNum - arr[num] + 'px';
         leftNum = leftNum - arr[num];
         num = num + 1;
       }
@@ -251,7 +251,7 @@
 
     function goRight() {
       if (num > 0) {
-        item.style.left = leftNum + arr[num - 1]  + 'px';
+        item.style.left = leftNum + arr[num - 1] + 'px';
         leftNum = leftNum + arr[num - 1];
         num = num - 1;
       }
@@ -319,7 +319,7 @@
       numElem = elem.length - 1;
       let boxW = box.offsetWidth;
       let itemW = item.offsetWidth;
-      if ( window.innerWidth < 800) {
+      if (window.innerWidth < 800) {
         startMove();
       }
     }
@@ -328,7 +328,7 @@
 
     function goLeft() {
       if (num < numElem) {
-        item.style.left = leftNum - arr[num]  + 'px';
+        item.style.left = leftNum - arr[num] + 'px';
         leftNum = leftNum - arr[num];
         num = num + 1;
       }
@@ -336,7 +336,7 @@
 
     function goRight() {
       if (num > 0) {
-        item.style.left = leftNum + arr[num - 1]  + 'px';
+        item.style.left = leftNum + arr[num - 1] + 'px';
         leftNum = leftNum + arr[num - 1];
         num = num - 1;
       }
@@ -381,6 +381,28 @@
     }
 
 
+  }
+
+})();
+
+//more service_page about block
+(() => {
+  let btn = document.querySelector('.js_more_service_about');
+  let box = document.querySelector('.js_service_about_box_item');
+
+  if (btn) {
+    btn.addEventListener('click', moreFunc);
+  }
+  function moreFunc() {
+    if (box.classList.contains('active')) {
+      btn.innerHTML = 'Читать полностью';
+      btn.classList.remove('active');
+      box.classList.remove('active');
+    } else {
+      btn.innerHTML = 'Закрыть';
+      btn.classList.add('active');
+      box.classList.add('active');
+    }
   }
 
 })();
