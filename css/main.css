@@ -4797,6 +4797,9 @@ footer.grey .footer_bottom_box {
   .question_accardion_item p {
     max-width: 100%;
   }
+  .picters .question_accardion_item p {
+    max-width: 100%;
+}
 
   .open.question_accardion_item .other_services_acc_img {
     display: none;
