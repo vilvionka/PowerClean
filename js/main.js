@@ -301,11 +301,49 @@
 })();
 
 
-//touchmove price_table
+
+
+//more service_page about block
 (() => {
-  let box = document.querySelector('.price_table_box');
-  let item = document.querySelector('.price_table');
-  let elem = document.querySelectorAll('.price_table .coll');
+  let btn = document.querySelector('.js_more_service_about');
+  let box = document.querySelector('.js_service_about_box_item');
+
+  if (btn) {
+    btn.addEventListener('click', moreFunc);
+  }
+  function moreFunc() {
+    if (box.classList.contains('active')) {
+      btn.innerHTML = 'Читать полностью';
+      btn.classList.remove('active');
+      box.classList.remove('active');
+    } else {
+      btn.innerHTML = 'Закрыть';
+      btn.classList.add('active');
+      box.classList.add('active');
+    }
+  }
+
+})();
+
+//delete advertising block
+(() => {
+  let box = document.querySelector('.js_advertising');
+  let but = document.querySelector('.js_advertising_close');
+
+  if(box){
+    but.addEventListener('click', function(){
+      box.classList.add('remove');
+    })
+  }
+
+
+})();
+
+//touchmove other service
+(() => {
+  let box = document.querySelector('.js_other_services_box_wrap');
+  let item = document.querySelector('.js_other_services_box');
+  let elem = document.querySelectorAll('.js_other_services_box_item');
   let numElem = null;
   let leftNum = 0;
   let num = 0;
@@ -319,7 +357,7 @@
       numElem = elem.length - 1;
       let boxW = box.offsetWidth;
       let itemW = item.offsetWidth;
-      if (window.innerWidth < 800) {
+      if (window.innerWidth < 780) {
         startMove();
       }
     }
@@ -328,16 +366,16 @@
 
     function goLeft() {
       if (num < numElem) {
-        item.style.left = leftNum - arr[num] + 'px';
-        leftNum = leftNum - arr[num];
+        item.style.left = leftNum - arr[num] - 10 + 'px';
+        leftNum = leftNum - arr[num] - 10;
         num = num + 1;
       }
     }
 
     function goRight() {
       if (num > 0) {
-        item.style.left = leftNum + arr[num - 1] + 'px';
-        leftNum = leftNum + arr[num - 1];
+        item.style.left = leftNum + arr[num - 1]  + 10 + 'px';
+        leftNum = leftNum + arr[num - 1] + 10;
         num = num - 1;
       }
     }
@@ -381,28 +419,6 @@
     }
 
 
-  }
-
-})();
-
-//more service_page about block
-(() => {
-  let btn = document.querySelector('.js_more_service_about');
-  let box = document.querySelector('.js_service_about_box_item');
-
-  if (btn) {
-    btn.addEventListener('click', moreFunc);
-  }
-  function moreFunc() {
-    if (box.classList.contains('active')) {
-      btn.innerHTML = 'Читать полностью';
-      btn.classList.remove('active');
-      box.classList.remove('active');
-    } else {
-      btn.innerHTML = 'Закрыть';
-      btn.classList.add('active');
-      box.classList.add('active');
-    }
   }
 
 })();

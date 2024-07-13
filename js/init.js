@@ -44,7 +44,7 @@ $('.blog_slider').slick({
       }
     },
     {
-      breakpoint:450,
+      breakpoint: 450,
       settings: {
         slidesToShow: 1,
         arows: true,
@@ -161,7 +161,7 @@ $('.action_slider').slick({
   ]
 });
 
-$('.foto_slider').slick({
+$('.foto_slider.desktop').slick({
   dots: true,
   arows: false,
   infinite: true,
@@ -171,20 +171,35 @@ $('.foto_slider').slick({
   centerMode: true,
   variableWidth: true,
   autoplay: false,
-  appendDots: $('.foto_slider_dots'),
+  appendDots: $('.desktop .foto_slider_dots'),
   responsive: [
     {
       breakpoint: 1280,
       settings: {
         slidesToShow: 3,
-        appendDots: $('.foto_slider_dots'),
+        appendDots: $('.desktop .foto_slider_dots'),
         arows: true,
-        prevArrow: $('.foto_slider_arrow_left'),
-        nextArrow: $('.foto_slider_arrow_right'),
+        prevArrow: $('.desktop .foto_slider_arrow_left'),
+        nextArrow: $('.desktop .foto_slider_arrow_right'),
       }
     }
   ]
 });
+$('.foto_slider.mobile').slick({
+  dots: true,
+  arows: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: false,
+  autoplay: false,
+  appendDots: $('.mobile .foto_slider_dots'),
+  arows: true,
+  prevArrow: $('.mobile .foto_slider_arrow_left'),
+  nextArrow: $('.mobile .foto_slider_arrow_right'),
+});
+
+
 $('.works_slider').slick({
   dots: true,
   arows: false,
@@ -242,14 +257,30 @@ $('.js_footer_middle_scroll').click(function () {
   $('html, body').animate({ scrollTop: 0 + 'px' }, 1000)
 });
 
+
+////
+let oldScrollTopPosition = 0;
+
 $(window).scroll(function () {
   let height = $(window).scrollTop();
+
+
+  if (oldScrollTopPosition > height) {
+    $('.js_footer_middle_scroll').addClass('active');
+  } else {
+    $('.js_footer_middle_scroll').removeClass('active')
+  }
   if (height > 700) {
     $('.js_call_fixed').addClass('active');
   } else {
     $('.js_call_fixed').removeClass('active');
+    $('.js_footer_middle_scroll').removeClass('active')
   }
+  oldScrollTopPosition = height;
 });
+
+
+// accordion gamb menu
 
 $(function () {
   var Accordion = function (el, multiple) {
